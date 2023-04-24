@@ -1,0 +1,21 @@
+CUDA_VISIBLE_DEVICES=3 python -u main_good_hiv.py \
+--dataset hiv \
+--lr 0.01 \
+--min_lr 1e-6 \
+--weight_decay 1e-5 \
+--beta 0.1 \
+--domain scaffold \
+--batch_size 1024 \
+--trails 10 \
+--c 0.1 \
+--o 1.0 \
+--co 0.1 \
+--hidden 128 \
+--cls_layer 2 \
+--layers 3 \
+--epochs 200 \
+--pretrain 100 \
+--prototype True \
+--memory True \
+--me_batch_n 2 >> ./log/1_hiv_scaffold_all0.1.log 2>&1 &
+
